@@ -16,7 +16,7 @@ function App() {
   useEffect(() => fetchEmployee(), [])
 
   const fetchEmployee = async() => {
-     const result = await axios(`https://randomuser.me/api/?results=25`)
+     const result = await axios(`https://randomuser.me/api/?results=25&nat=us,dk,fr,gb&seed=seed`)
      console.log(result);
      setEmployee(result.data.results)
      setFilterEmployee(result.data.results)
