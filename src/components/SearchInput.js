@@ -3,10 +3,13 @@ import styled from 'styled-components'
 
 const Input = styled.input`
 font-size: 22px;
-border-radius: 5px
+border-radius: 5px;
+`
+const Button = styled.button`
+margin-left: 10px;
 `
 
-const SearchInput = ({employeeName, setEmployeeName, handleSubmit}) => {
+const SearchInput = ({employeeName, setEmployeeName, handleSubmit, handleReset}) => {
     return (
     <div className="container">
         <form>
@@ -27,6 +30,11 @@ const SearchInput = ({employeeName, setEmployeeName, handleSubmit}) => {
                 type="submit" 
                 className="btn btn-primary">Submit
          </button>
+         <Button 
+                onClick={handleReset}
+                type="submit" 
+                className="btn btn-primary">Reset
+         </Button>
         </form>  
     </div>  
     )
