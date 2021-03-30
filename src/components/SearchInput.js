@@ -1,4 +1,10 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Input = styled.input`
+font-size: 22px;
+border-radius: 5px
+`
 
 const SearchInput = ({employeeName, setEmployeeName, handleSubmit}) => {
     return (
@@ -6,7 +12,7 @@ const SearchInput = ({employeeName, setEmployeeName, handleSubmit}) => {
         <form>
             <div className="mb-3">
                  <label for="searchInput" className="form-label">Search</label>
-                <input 
+                <Input 
                 onChange={e => setEmployeeName(e.target.value)}
                 value={employeeName}
                 name="search"
