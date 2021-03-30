@@ -25,15 +25,9 @@ function App() {
   const handleSubmit = e => {
     e.preventDefault()
     console.log(employeeName);
-
-    
-
-
-    const firstName = e.target.value
-    // console.log(firstName);
     const filteredResults = employee.filter(emp => {
       // console.log(emp.name.first.toLowerCase());
-      if(emp.name.first.toLowerCase() === employeeName.toLowerCase()) {
+      if(emp.name.first.toLowerCase() || emp.name.last.toLowerCase() === employeeName.toLowerCase()) {
         console.log(emp.name.first);
       }
       let values = Object.values(emp).join().toLowerCase()
