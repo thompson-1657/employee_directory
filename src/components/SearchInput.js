@@ -30,11 +30,13 @@ const SearchInput = ({employeeName, setEmployeeName, handleSubmit, handleReset})
                 type="submit" 
                 className="btn btn-primary">Submit
          </button>
+         
          <Button 
                 onClick={handleReset}
                 type="submit" 
                 className="btn btn-primary">Reset
          </Button>
+
         </form>  
     </div>  
     )

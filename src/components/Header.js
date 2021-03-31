@@ -1,4 +1,9 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const H1 = styled.h1`
+ margin-top: 20px;
+`
 
 
 const Header = () => {
@@ -6,9 +11,7 @@ const Header = () => {
         <div className="container">
          <div className="row" style={{textAlign: 'center'}}>
              <div className="jumbotron">
-                <h1>Employee Directory</h1>
-                     {/* <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-                    responsive, mobile-first projects on the web.</p> */}
+                <H1>Employee Directory</H1>
              </div>
          </div>
         </div>

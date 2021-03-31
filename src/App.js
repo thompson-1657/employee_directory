@@ -5,8 +5,6 @@ import SearchInput from './components/SearchInput.js'
 import EmployeeInformation from './components/EmployeeInformation'
 import './App.css';
 
-
-
 function App() {
 
   const [employee, setEmployee] = useState({})
@@ -27,12 +25,11 @@ function App() {
     console.log(employeeName);
     const filteredResults = employee.filter(emp => {
       if(emp.name.first.toLowerCase() || emp.name.last.toLowerCase() === employeeName.toLowerCase()) {
-        console.log(emp.name.first);
+        let values = Object.values(emp).join().toLowerCase()
+        return values.indexOf(employeeName.toLowerCase()) !== -1
       }
-      let values = Object.values(emp).join().toLowerCase()
-      return values.indexOf(employeeName.toLowerCase()) !== -1
     })
-    setFilterEmployee(filteredResults)
+        setFilterEmployee(filteredResults)
   }
   
   const handleReset = e => {
@@ -44,9 +41,10 @@ function App() {
       <Header />
       <SearchInput employeeName={employeeName} 
       setEmployeeName={setEmployeeName}
-      handleSubmit={handleSubmit}/>
+      handleSubmit={handleSubmit}
+      handleReset={handleReset}
+      />
       <EmployeeInformation employees = {filterEmployee} />
-      
     </div>
   );
 }
