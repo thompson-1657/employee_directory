@@ -50,6 +50,8 @@ npm start
 
 To use the Employee Directory the user can view a list of employees by simply visiting the deployed site. If the user would like to search for a specific employee they can do so by entering and searching the employee by their first name, last name, phone number, or email address. Once one of these is entered the user that matches the search input will be filtered out for viewing. To get back tothe full list of employees the user can click the rest button and the full, original list will be restored.
 
+Link to deployed site: [https://thompson-1657.github.io/employee_directory/](https://thompson-1657.github.io/employee_directory/)
+
 ## Technologies
 
 ---
